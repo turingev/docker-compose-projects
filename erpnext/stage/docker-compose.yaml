@@ -80,8 +80,7 @@ services:
       - bench-network
       - mariadb-network
   frontend:
-    # image: "${CUSTOM_IMAGE:-frappe/erpnext}:${CUSTOM_TAG:-$ERPNEXT_VERSION}"
-    image: ghcr.io/turingev/erpnext-custom:latest
+    image: "${CUSTOM_IMAGE:-frappe/erpnext}:${CUSTOM_TAG:-$ERPNEXT_VERSION}"
     pull_policy: "${PULL_POLICY:-always}"
     restart: "${RESTART_POLICY:-unless-stopped}"
     platform: linux/amd64
