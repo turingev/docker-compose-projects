@@ -107,7 +107,7 @@ services:
       - bench-network
     labels:
       - traefik.enable=true
-      - traefik.docker.network=traefik-public
+      - traefik.docker.network=coolify"
       - "traefik.http.services.${ROUTER?ROUTER not set}.loadbalancer.server.port=8080"
       - "traefik.http.routers.${ROUTER}-http.service=${ROUTER}"
       - "traefik.http.routers.${ROUTER}-http.entrypoints=http"
